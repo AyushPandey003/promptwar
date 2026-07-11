@@ -1,0 +1,20 @@
+[
+  { "name": "ragi flour", "aliases": ["ragi"], "category": "grain", "unit": "250 g pack", "estimatedCost": 35, "substitutions": ["besan", "atta with a little sooji"] },
+  { "name": "curd", "aliases": ["dahi"], "category": "dairy", "unit": "200 g cup", "estimatedCost": 25, "substitutions": ["buttermilk", "lemon water for tang"] },
+  { "name": "onion", "aliases": ["pyaz", "onions"], "category": "vegetable", "unit": "500 g", "estimatedCost": 30, "substitutions": ["spring onion", "shallots"] },
+  { "name": "tomato", "aliases": ["tamatar", "tomatoes"], "category": "vegetable", "unit": "500 g", "estimatedCost": 32, "substitutions": ["curd with chilli", "store-bought puree in small quantity"] },
+  { "name": "green chilli", "aliases": ["chilli", "mirchi"], "category": "flavour", "unit": "small pack", "estimatedCost": 12, "substitutions": ["red chilli flakes", "black pepper"] },
+  { "name": "toor dal", "aliases": ["arhar dal"], "category": "staple", "unit": "500 g", "estimatedCost": 78, "substitutions": ["moong dal", "masoor dal"] },
+  { "name": "moong dal", "aliases": ["yellow moong"], "category": "staple", "unit": "500 g", "estimatedCost": 68, "substitutions": ["masoor dal", "toor dal"] },
+  { "name": "atta", "aliases": ["wheat flour"], "category": "grain", "unit": "1 kg", "estimatedCost": 52, "substitutions": ["multigrain flour", "ready phulka"] },
+  { "name": "ghee", "aliases": [], "category": "dairy", "unit": "100 ml", "estimatedCost": 65, "substitutions": ["butter", "neutral oil with jeera"] },
+  { "name": "rice", "aliases": [], "category": "staple", "unit": "1 kg", "estimatedCost": 70, "substitutions": ["millets", "flattened rice for quick meals"] },
+  { "name": "paneer", "aliases": [], "category": "protein", "unit": "200 g", "estimatedCost": 90, "substitutions": ["eggs", "tofu"] },
+  { "name": "eggs", "aliases": ["egg"], "category": "protein", "unit": "6 pack", "estimatedCost": 45, "substitutions": ["paneer", "roasted chana"] },
+  { "name": "ginger", "aliases": ["adrak"], "category": "flavour", "unit": "100 g", "estimatedCost": 16, "substitutions": ["ginger paste", "skip if using garlic and chilli"] },
+  { "name": "garlic", "aliases": ["lahsun"], "category": "flavour", "unit": "100 g", "estimatedCost": 18, "substitutions": ["garlic paste", "hing for a different profile"] },
+  { "name": "capsicum", "aliases": ["shimla mirch"], "category": "vegetable", "unit": "250 g", "estimatedCost": 28, "substitutions": ["carrot", "beans"] },
+  { "name": "coriander", "aliases": ["dhania leaves"], "category": "flavour", "unit": "1 bunch", "estimatedCost": 10, "substitutions": ["mint", "spring onion greens"] },
+  { "name": "poha", "aliases": [], "category": "staple", "unit": "500 g", "estimatedCost": 42, "substitutions": ["sooji", "flattened millets"] },
+  { "name": "besan", "aliases": ["gram flour"], "category": "grain", "unit": "500 g", "estimatedCost": 55, "substitutions": ["ragi flour", "atta with curd"] }
+]

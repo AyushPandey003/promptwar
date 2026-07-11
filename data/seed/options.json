@@ -1,0 +1,114 @@
+[
+  {
+    "groupKey": "dayType",
+    "value": "Busy weekday",
+    "label": "Busy weekday",
+    "description": "Fast, low-mess, and realistic around work or classes.",
+    "sortOrder": 1,
+    "isDefault": true
+  },
+  {
+    "groupKey": "dayType",
+    "value": "Lazy Sunday",
+    "label": "Lazy Sunday",
+    "description": "A little more indulgent with time for one special dish.",
+    "sortOrder": 2,
+    "isDefault": false
+  },
+  {
+    "groupKey": "dayType",
+    "value": "Month-end budget",
+    "label": "Month-end budget",
+    "description": "Maximize pantry reuse and control every rupee.",
+    "sortOrder": 3,
+    "isDefault": false
+  },
+  {
+    "groupKey": "dayType",
+    "value": "Friends coming over",
+    "label": "Friends coming over",
+    "description": "More impressive but still compact-kitchen friendly.",
+    "sortOrder": 4,
+    "isDefault": false
+  },
+  {
+    "groupKey": "appetite",
+    "value": "Comfort food, but not too heavy",
+    "label": "Comforting, not too heavy",
+    "description": "Warm meals with balance and no food coma.",
+    "sortOrder": 1,
+    "isDefault": true
+  },
+  {
+    "groupKey": "appetite",
+    "value": "Craving spice and crunch",
+    "label": "Spice and crunch",
+    "description": "Sharper flavours and stronger texture contrast.",
+    "sortOrder": 2,
+    "isDefault": false
+  },
+  {
+    "groupKey": "appetite",
+    "value": "High-protein and filling",
+    "label": "High-protein and filling",
+    "description": "Keep meals more sustaining for long days or workouts.",
+    "sortOrder": 3,
+    "isDefault": false
+  },
+  {
+    "groupKey": "cookingSkill",
+    "value": "Learning cook",
+    "label": "Learning cook",
+    "description": "Minimal-risk recipes with straightforward steps.",
+    "sortOrder": 1,
+    "isDefault": true
+  },
+  {
+    "groupKey": "cookingSkill",
+    "value": "Confident beginner",
+    "label": "Confident beginner",
+    "description": "Comfortable with multitasking and quick prep.",
+    "sortOrder": 2,
+    "isDefault": false
+  },
+  {
+    "groupKey": "cookingSkill",
+    "value": "Fast home cook",
+    "label": "Fast home cook",
+    "description": "Ready for better batching and sharper timing.",
+    "sortOrder": 3,
+    "isDefault": false
+  },
+  {
+    "groupKey": "dietaryPreference",
+    "value": "Flexible vegetarian with egg option",
+    "label": "Vegetarian with eggs",
+    "description": "Prioritise veg but allow eggs for convenience and protein.",
+    "sortOrder": 1,
+    "isDefault": true
+  },
+  {
+    "groupKey": "dietaryPreference",
+    "value": "Pure vegetarian",
+    "label": "Pure vegetarian",
+    "description": "No eggs or meat.",
+    "sortOrder": 2,
+    "isDefault": false
+  },
+  {
+    "groupKey": "dietaryPreference",
+    "value": "High-protein vegetarian",
+    "label": "High-protein vegetarian",
+    "description": "Use dairy, lentils, and soy more intentionally.",
+    "sortOrder": 3,
+    "isDefault": false
+  },
+  {
+    "groupKey": "dietaryPreference",
+    "value": "Chicken allowed",
+    "label": "Chicken allowed",
+    "description": "Include chicken when it improves value or flavour.",
+    "sortOrder": 4,
+    "isDefault": false
+  }
+]

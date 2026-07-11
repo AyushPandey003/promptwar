@@ -1,0 +1,48 @@
+{
+  "slug": "ayush-food-story",
+  "displayName": "Ayush",
+  "story": "A food lover from Jodhpur who studied in Bhopal and now lives in Bengaluru, chasing meals with warmth, spice, and comfort while making PG cooking feel intentional instead of repetitive.",
+  "hometown": "Jodhpur",
+  "collegeCity": "Bhopal",
+  "currentCity": "Bengaluru",
+  "cookingReason": "Recently learned cooking after getting bored of repetitive PG rice meals and wants practical but exciting daily food.",
+  "defaultPantry": "rice, atta, onions, tomatoes, curd, ginger, garlic, green chilli, jeera, turmeric, chilli powder, garam masala, besan, eggs",
+  "signatureMeals": {
+    "Breakfast": {
+      "slot": "Breakfast",
+      "name": "Bengaluru-style ragi chilli cheela",
+      "why": "Fast, filling, and ideal for a beginner who wants something better than plain toast or leftover rice.",
+      "tasks": [
+        "Mix a quick batter with ragi or besan, curd, chilli, and chopped onion.",
+        "Make a fast chutney or curd dip while the pan heats.",
+        "Cook two thin cheelas and pack extra dip for later use."
+      ],
+      "ingredients": ["ragi flour", "curd", "onion", "tomato", "green chilli"],
+      "memoryHook": "A Bengaluru breakfast rhythm adapted for a compact PG kitchen."
+    },
+    "Lunch": {
+      "slot": "Lunch",
+      "name": "Bhopal comfort dal bowl",
+      "why": "Comforting enough for a long day, but simplified for one person and a tight student-style setup.",
+      "tasks": [
+        "Pressure cook dal with tomato, garlic, and turmeric.",
+        "Prepare a quick tadka and fold it into the dal.",
+        "Serve with soft atta bites, rice, or toasted leftovers based on budget."
+      ],
+      "ingredients": ["toor dal", "atta", "garlic", "tomato", "ghee"],
+      "memoryHook": "Captures the comforting college-food feeling of Bhopal without a complicated process."
+    },
+    "Dinner": {
+      "slot": "Dinner",
+      "name": "Jodhpur masala khichdi skillet",
+      "why": "Turns a rice-heavy dinner into something spicy, richer, and more memorable with very little extra effort.",
+      "tasks": [
+        "Cook rice and moong dal together until soft.",
+        "Build a masala base with onion, tomato, chilli, and spices.",
+        "Fold the base into the khichdi and finish with curd or protein."
+      ],
+      "ingredients": ["rice", "moong dal", "onion", "curd", "paneer"],
+      "memoryHook": "Jodhpur warmth and spice, made manageable for a weekday night."
+    }
+  }
+}

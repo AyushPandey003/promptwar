@@ -1,43 +1,73 @@
 # SpiceRoute Planner Context
 
 ## Challenge
-Build a simple AI micro-app that generates a personal cooking to-do list based on the user's day. Required output: breakfast/lunch/dinner plan, grocery list, substitutions, and budget feasibility logic.
+Build a simple AI micro-app that generates a personal cooking to-do list based on the user's day. Required outputs: breakfast/lunch/dinner plan, grocery list, substitutions, and budget feasibility logic.
 
-## User Context
-- Food lover from Jodhpur, Rajasthan.
-- Studied in Bhopal.
-- Currently living in Bengaluru and cooking more because PG rice meals became boring.
-- Wants the submission optimized for PromptWars-style scoring: code quality, security, dynamic behavior, efficiency, testing, accessibility, and close alignment with the challenge.
+## Current Delivery
+SpiceRoute Planner is now a **multi-page, authenticated, AI-powered cooking planner** aligned to the PromptWars scoring priorities of code quality, security, dynamic behavior, efficiency, testing, accessibility, and problem-statement alignment.
 
-## Implementation Notes
-- Replaced the starter Next screen with a responsive cooking planner called SpiceRoute Planner.
-- Added an interactive client workflow for day type, appetite, skill, dietary preference, budget, cook time, pantry, and selected meals.
-- Added `/api/meal-plans` route handler for generation and history.
-- Added Gemini generation through the REST API using `GEMINI_API_KEY` and optional `GEMINI_MODEL` environment variables.
-- Added Drizzle ORM with Neon serverless Postgres using `DATABASE_URL`.
-- Added a Drizzle schema for `meal_plans` with JSONB input/output storage and budget metadata.
-- Added defensive validation/normalization for user input and model output.
-- Added deterministic fallback planning so the app remains usable when Gemini or the database is unavailable locally.
-- Added `.env.example` only; real secrets must stay in local/Vercel environment variables and must not be committed.
+## Major Updates
+- Shifted the app to **Server Actions** for plan generation and login.
+- Added **JWT cookie authentication** with protected routes via `proxy.ts`.
+- Added **username/password login** page and demo seeded user.
+- Added protected pages:
+  - `/dashboard` for planner generation
+  - `/meals` for generated meal cards
+  - `/groceries` for grocery and budget view
+- Refactored to a more modular structure with shared auth, planner, repository, schema, and UI components.
+- Applied a **Herb & Hearth / Stitch-inspired** visual system with soft eggshell surfaces, herb-green accents, rounded cards, and spacious dashboard layouts.
+- Added database-backed seed content so planner profile, options, ingredient pricing, and demo login are not embedded as ad-hoc UI data.
 
-## Files Changed
-- `app/page.tsx`: full interactive planner UI.
-- `app/layout.tsx`: app metadata and clean root body.
-- `app/globals.css`: global theme and focus styles.
-- `app/api/meal-plans/route.ts`: Gemini generation, Drizzle persistence, recent plan history.
-- `lib/planner.ts`: shared planner types, input validation, model-output normalization, fallback generator.
-- `lib/db.ts`: Neon/Drizzle database client helper.
-- `lib/schema.ts`: Drizzle `meal_plans` table schema.
-- `.env.example`: required environment variable names without secrets.
-- `package.json` and `pnpm-lock.yaml`: added `drizzle-orm` and `@neondatabase/serverless`.
+## Data / Persistence
+- Uses **Neon Postgres** via `DATABASE_URL`.
+- Uses **Drizzle ORM** schema for:
+  - `profiles`
+  - `planner_options`
+  - `ingredient_catalog`
+  - `app_users`
+  - `meal_plans`
+- Added working seed script: `pnpm seed`.
+
+## GenAI Usage
+- Uses **Google Gemini API** (`GEMINI_API_KEY`, optional `GEMINI_MODEL`) in the server-side generation flow.
+- Gemini produces the structured meal plan JSON including meals, groceries, substitutions, budget reasoning, and timeline.
+- If Gemini is unavailable, the app falls back to a deterministic seeded planner.
 
 ## Security Notes
-- Database URL and Gemini API key are read only on the server.
-- No secret is exposed through `NEXT_PUBLIC_*` variables.
-- Client calls only the internal route handler.
-- User text fields are length-limited and normalized before being sent to Gemini or stored.
-- Gemini output is parsed as JSON and normalized before rendering.
-## Verification Notes
-- Removed Next Google font loading to avoid build-time network dependency; the app now uses system fonts.
-- pnpm lint passed.
-- pnpm build passed after rerunning outside the sandbox because the TypeScript worker hit a Windows sandbox spawn permission issue.
+- JWT stored in an **HttpOnly** cookie.
+- Protected pages are guarded server-side.
+- Passwords are stored as **scrypt hashes**.
+- Secrets remain server-only.
+- User input is validated and normalized before model/database use.
+- Gemini output is parsed and normalized before rendering.
+
+## Seeded Demo Login
+- Username: `chefayush`
+- Password: `SEED_DEMO_PASSWORD` or default `PromptWars@123`
+
+## Key Files
+- `app/actions.ts`
+- `app/dashboard/page.tsx`
+- `app/groceries/page.tsx`
+- `app/meals/page.tsx`
+- `app/login/page.tsx`
+- `app/login/login-form.tsx`
+- `app/planner-form.tsx`
+- `app/components/protected-header.tsx`
+- `lib/auth.ts`
+- `lib/planner.ts`
+- `lib/repository.ts`
+- `lib/schema.ts`
+- `scripts/seed.ts`
+- `data/seed/profile.json`
+- `data/seed/options.json`
+- `data/seed/ingredients.json`
+- `README.md`
+- `DESIGN.md`
+- `SUBMISSION_NOTES.md`
+
+## Verification
+- `pnpm seed` passed.
+- `pnpm lint` passed.
+- `pnpm test` passed.
+- `pnpm build` passed.
